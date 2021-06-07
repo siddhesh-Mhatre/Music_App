@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main_div{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.music_container{
+    width:35rem;
+    height: 55rem;
+    background-color: #ffffff;
+    border-radius:2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0,0,0,0.2);
+    padding: 3rem;
+    text-align: center;
+}
+.music_container #title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+}
+
+
+.music_container #artist{
+    color: #ccacac;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+.img_container{
+    width:25rem;
+    height: 25rem;
+    margin: auto;
+    
+}
+
+.img_container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.2rem 3rem 0.5rem rgba(0,0,0,0.4);
+}
+
+.music_controls{
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+.music_controls .fa{
+    color: #111111;
+    font-size: 2rem;
+    cursor: pointer;
+    filter: drop-shadow(0 1.2rem 3rem 0.5rem rgba(0,0,0,0.4));
+}
+.music_controls .main_button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #111;
+    color: #f6f6f6;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music_controls .fa:hover{
+    color: grey;
+}
+
+.music_controls .fa-play:hover{
+    background-color: #f6f6f6;
+    color: #111;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0,0,0,0.4);
+}
+
+/* add animation */
+.anime{
+    animation: rotatePlayer 3s linear infinite;
+}
+
+@keyframes rotatePlayer {
+    from {
+     transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/****************************** categorey */
+.Categorey  h1{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.3);
+    margin-top: 5px;
+}
+
+.Categorey  ul{
+    font-size: 24px;
+    line-height: 73px;
+   
+    text-decoration: none;
+    list-style: none;
+}
+
+.Categorey  ul li{
+    border-bottom: 1px solid #607d8b2b;
+    cursor: pointer;
+}
+
+.Categorey  ul li:hover{
+    background: #9e9e9e1f;
+    text-shadow: 0 0 black;
+    transform: scale(1.01);
+}
+
+/****************************** Music_list */
+.Music_List{
+    overflow: auto;
+}
+.Music_List ul{
+    font-size: 19px;
+    text-align: left;
+    line-height: 60px;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .main_div{
+
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+   
+    }
+    .music_container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
+/* animation */
+.pulse {
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+  }
+  .pulse:hover {
+    animation: none;
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 #48c8fb;
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px #f99acd;
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 #b6acdf;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 #48c8fb;
+      box-shadow: 0 0 0 0  #48c8fb;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px #f99acd;
+        box-shadow: 0 0 0 10px #f99acd;
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 #b6acdf;
+        box-shadow: 0 0 0 0 #b6acdf;
+    }
+  }
+
+
+
+
+  .progresbar_container{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+   margin-top: 10px;
+}
+
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    /* transition: all 1s linear; */
+    cursor: pointer;
+    appearance: none;
+}
+
+.progress{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    border-radius: 4rem;
+
+    transition: width 100ms linear;
+    cursor: pointer;
+    appearance: none;
+}
+
+.progress_duration_meter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}

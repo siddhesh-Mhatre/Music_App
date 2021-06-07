@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+    <script src="https://use.fontawesome.com/436d9de60e.js"></script>
+    <title>🎼Music 🎵</title>
+  </head>
+
+  <body>
+
+    <div class="main_div">
+
+      <!-- categorey -->
+      <div class="music_container Categorey ">
+            <h1>Categorey</h1><br>
+            <hr>
+           <ul>
+             <li onclick="music_categorey(0)" id="0">Top Picks</li>
+             <li onclick="music_categorey(1)" id="1">Your Personalised Mixes</li>
+             <li onclick="music_categorey(2)" id="2"> Top Charts </li>
+             <li onclick="music_categorey(3)" id="3"> New Releases </li>
+             <li onclick="music_categorey(4)" id="4"> Trending English </li>
+             <li onclick="music_categorey(5)" id="5"> Your Most Played Song </li>
+           </ul>
+      </div>
+ 
+
+      <!-- music player -->
+      <div class="music_container">
+        <h2 id="title">categorey</h2>
+        <h3 id="artist">sound track</h3>
+        <div class="img_container">
+          <img src="img/sound1.jpg" alt="song" class="s" />
+        </div>
+        <audio src="music/sound1.mp3"></audio>
+
+                <!-- progress bar -->
+                <div class="progresbar_container" id="progress_container">
+                  <div class="progress_duration_meter">
+                    <div id="current_time">0:0</div>
+        
+                    <div id="duration">0:0</div>
+                  </div>
+                    <div id="progress_div" class="progress_div">
+                      <div class="progress" id="progress"></div>
+                    </div>
+              
+                </div>
+        
+
+        <!------------------ controls ----------------->
+        <div class="music_controls">
+          <i class="fa fa-backward" id="prev" title="Previous"></i>
+          <i class="fa fa-play main_button  " id="play" title="Play"></i>
+          <i class="fa fa-forward" id="next" title="Next"></i>
+        </div>
+      </div>
+      <!-- end music player -->
+
+
+      <!-- music LIST -->
+      <div class="music_container Categorey Music_List">
+        <h1>List</h1><br>
+        <hr>
+       <ul id="song_name">
+
+       </ul>
+  </div>
+    </div>
+  </body>
+<script src="js/app.js"></script>
+</html>
